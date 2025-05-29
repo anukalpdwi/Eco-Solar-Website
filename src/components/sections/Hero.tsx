@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative h-screen bg-hero-pattern bg-cover bg-center">
+    <section className="relative h-screen bg-hero-pattern bg-cover bg-center pt-16 md:pt-24">
       <div className="absolute inset-0 bg-gradient-to-br from-black/50 to-transparent"></div>
       
       <div className="container relative h-full flex flex-col justify-center">

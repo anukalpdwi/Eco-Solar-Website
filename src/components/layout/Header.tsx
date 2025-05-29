@@ -32,7 +32,7 @@ const Header: React.FC = () => {
         isScrolled ? 'bg-white shadow-md py-1' : 'bg-transparent py-4'
       }`}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between mt-0 mb-2 md:mb-4">
         <div className="flex items-center">
           <img
             src="/eco solar logo.png"
