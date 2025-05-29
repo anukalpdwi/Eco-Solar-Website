@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <img
-                src="/WhatsApp Image 2025-05-24 at 10.19.00_9ec0ea33.jpg"
+                src="/eco solar logo.png"
                 alt="Eco Solar Logo"
                 className="h-8 w-auto mr-2"
               />
