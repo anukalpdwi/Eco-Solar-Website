@@ -73,7 +73,7 @@ const Header: React.FC = () => {
               <span>+91 99935 11331</span>
             </a>
             <a
-              href="https://wa.me/919982953595?text=Hello%2C%20I'm%20interested%20in%20solar%20installation.%20Please%20provide%20more%20information."
+              href="https://wa.me/919993511331?text=Hello%2C%20I'm%20interested%20in%20solar%20installation.%20Please%20provide%20more%20information."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center"

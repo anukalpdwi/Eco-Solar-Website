@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const WhatsAppButton: React.FC = () => {
   return (
     <motion.a
-      href="https://wa.me/919982953595?text=Hello%2C%20I'm%20interested%20in%20solar%20installation.%20Please%20provide%20more%20information."
+      href="https://wa.me/919993511331?text=Hello%2C%20I'm%20interested%20in%20solar%20installation.%20Please%20provide%20more%20information."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white rounded-full p-4 shadow-lg hover:bg-[#128C7E] transition-colors"
