@@ -41,7 +41,7 @@ const Header: React.FC = () => {
               src="/eco solar logo.png"
               alt="Eco Solar Logo"
               className={`transition-all duration-300 ${
-                isScrolled ? 'h-24 w-32' : 'h-24 w-32'
+                isScrolled ? 'h-24 w-32' : 'h-20 w-20'
               }`}
             />
           </div>
