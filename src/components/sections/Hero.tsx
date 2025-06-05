@@ -81,7 +81,7 @@ const Hero: React.FC = () => {
           <img
             src="/bg21.PNG"
             alt="Eco Solar"
-            className="h-[400px] w-[400px] object-cover shadow-2xl border-2 border-white rounded-lg"
+            className="h-[400px] w-[400px] object-contain shadow-2xl border-2 border-white rounded-lg"
           />
         </div>
       </div>
