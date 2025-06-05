@@ -153,6 +153,7 @@ const WhyChooseUs: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
+            {/* 
             <h3 className="text-2xl font-bold mb-6">Your Local Solar Energy Expert</h3>
             <div className="space-y-6">
               {features.map((feature, index) => (
@@ -164,8 +165,10 @@ const WhyChooseUs: React.FC = () => {
                 />
               ))}
             </div>
+            */}
           </div>
 
+          {/* 
           <div className="relative">
             <img
               src="https://images.pexels.com/photos/9875441/pexels-photo-9875441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
@@ -192,6 +195,7 @@ const WhyChooseUs: React.FC = () => {
               </div>
             </div>
           </div>
+          */}
         </div>
       </div>
     </section>

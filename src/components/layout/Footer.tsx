@@ -78,18 +78,20 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Phone className="h-5 w-5 text-primary-500 mr-2 mt-0.5" />
-                <span className="text-gray-400">+91 99829 53595</span>
+                <span className="text-gray-400">+91 99935 11331</span>
               </li>
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-primary-500 mr-2 mt-0.5" />
-                <span className="text-gray-400">info@ecosolar.com</span>
+                <span className="text-gray-400">ecosolarindia.inc@gmail.com </span>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary-500 mr-2 mt-0.5" />
                 <span className="text-gray-400">
-                  Near Devi Shakuntala College,
-                  <br />Jaisinghnagar, Shahdol,
-                  <br />Madhya Pradesh 484771
+                  57 Shushila bhawan ,Priyadarshini phase 3
+ 
+
+                  <br />Shree Rameshwaram Bagmugaliya
+                  <br />Bhopal, Madhya Pradesh 462043
                 </span>
               </li>
             </ul>

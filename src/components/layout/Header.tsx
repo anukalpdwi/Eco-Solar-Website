@@ -41,7 +41,7 @@ const Header: React.FC = () => {
               src="/eco solar logo.png"
               alt="Eco Solar Logo"
               className={`transition-all duration-300 ${
-                isScrolled ? 'h-14 w-20' : 'h-24 w-32'
+                isScrolled ? 'h-24 w-32' : 'h-24 w-32'
               }`}
             />
           </div>
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
               }`}
             >
               <Phone className="h-5 w-5 mr-2" />
-              <span>+91 99829 53595</span>
+              <span>+91 99935 11331</span>
             </a>
             <a
               href="https://wa.me/919982953595?text=Hello%2C%20I'm%20interested%20in%20solar%20installation.%20Please%20provide%20more%20information."
