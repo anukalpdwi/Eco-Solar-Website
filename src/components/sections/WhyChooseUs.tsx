@@ -103,7 +103,7 @@ const WhyChooseUs: React.FC = () => {
   const features = [
     {
       title: "Local Expertise",
-      description: "Deep understanding of Madhya Pradesh's climate and solar potential, ensuring optimal system design for maximum efficiency."
+      description: "Deep understanding of India's climate and solar potential, ensuring optimal system design for maximum efficiency."
     },
     {
       title: "Competitive Pricing",
@@ -135,7 +135,7 @@ const WhyChooseUs: React.FC = () => {
           className="section-title"
         >
           <h2>Why Choose Us</h2>
-          <p>Your trusted local partner for solar solutions in Madhya Pradesh</p>
+          <p>Your trusted local partner for solar solutions in India</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">

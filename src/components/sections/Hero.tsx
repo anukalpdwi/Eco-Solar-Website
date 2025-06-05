@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
           className="max-w-2xl z-10"
         >
           <span className="inline-block bg-primary-500 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
-            Sustainable Energy Solutions
+            <span className="font-extrabold text-primary-900">Eco Solar</span> Sustainable Energy Solutions
           </span>
           
           <h1 className="text-white font-bold mb-6 text-3xl md:text-4xl lg:text-5xl">
