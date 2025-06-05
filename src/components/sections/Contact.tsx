@@ -1,46 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { 
-  Phone, Mail, MapPin, Send, Check
-} from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Check } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
 
 const Contact: React.FC = () => {
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    interestType: 'residential',
-  });
-  
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormState((prev) => ({ ...prev, [name]: value }));
-  };
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real scenario, this would submit to a backend
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setFormState({
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        interestType: 'residential',
-      });
-    }, 1000);
-  };
+  const [state, handleSubmit] = useForm("myzjzlbo"); // <-- Your Formspree endpoint ID
 
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-  
+
   return (
     <section id="contact" className="section bg-gray-50">
       <div className="container">
@@ -57,7 +28,7 @@ const Contact: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
           <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
-            {isSubmitted ? (
+            {state.succeeded ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -71,7 +42,7 @@ const Contact: React.FC = () => {
                   Your consultation request has been received. One of our solar experts will contact you within 24 hours to discuss your solar requirements.
                 </p>
                 <button
-                  onClick={() => setIsSubmitted(false)}
+                  onClick={() => window.location.reload()}
                   className="btn btn-outline"
                 >
                   Submit Another Request
@@ -87,12 +58,11 @@ const Contact: React.FC = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formState.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Your name"
                   />
+                  <ValidationError prefix="Name" field="name" errors={state.errors} />
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -104,12 +74,11 @@ const Contact: React.FC = () => {
                       type="email"
                       id="email"
                       name="email"
-                      value={formState.email}
-                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       placeholder="your.email@example.com"
                     />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} />
                   </div>
                   
                   <div>
@@ -120,12 +89,11 @@ const Contact: React.FC = () => {
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formState.phone}
-                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                       placeholder="+91 XXXXX XXXXX"
                     />
+                    <ValidationError prefix="Phone" field="phone" errors={state.errors} />
                   </div>
                 </div>
                 
@@ -136,8 +104,6 @@ const Contact: React.FC = () => {
                   <select
                     id="interestType"
                     name="interestType"
-                    value={formState.interestType}
-                    onChange={handleChange}
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   >
                     <option value="residential">Residential Property</option>
@@ -145,6 +111,7 @@ const Contact: React.FC = () => {
                     <option value="industrial">Industrial Facility</option>
                     <option value="other">Other</option>
                   </select>
+                  <ValidationError prefix="InterestType" field="interestType" errors={state.errors} />
                 </div>
                 
                 <div className="mb-6">
@@ -154,12 +121,11 @@ const Contact: React.FC = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formState.message}
-                    onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="Tell us about your energy needs and any specific requirements"
                   />
+                  <ValidationError prefix="Message" field="message" errors={state.errors} />
                 </div>
                 
                 <div className="mb-6">
@@ -180,6 +146,7 @@ const Contact: React.FC = () => {
                   className="btn btn-primary w-full flex items-center justify-center"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
+                  disabled={state.submitting}
                 >
                   Get Free Consultation
                   <Send className="ml-2 h-5 w-5" />
