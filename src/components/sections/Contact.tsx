@@ -197,7 +197,7 @@ const Contact: React.FC = () => {
                   <Phone className="h-6 w-6 mr-4 mt-1" />
                   <div>
                     <h4 className="font-medium mb-1">Phone</h4>
-                    <p className="text-white/90">+91 99829 53595</p>
+                    <p className="text-white/90">+91 99935 11331</p>
                     <p className="text-white/70 text-sm">Mon-Sat: 9:00 AM - 7:00 PM</p>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ const Contact: React.FC = () => {
                   <Mail className="h-6 w-6 mr-4 mt-1" />
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
-                    <p className="text-white/90">info@ecosolarindia.com</p>
+                    <p className="text-white/90">ecosolarindia.inc@gmail.com </p>
                     <p className="text-white/70 text-sm">We respond within 24 hours</p>
                   </div>
                 </div>
@@ -216,9 +216,9 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="font-medium mb-1">Office</h4>
                     <p className="text-white/90">
-                      Near Devi Shakuntala College,
-                  <br />Jaisinghnagar, Shahdol,
-                  <br />Madhya Pradesh 484771
+                     57 Shushila bhawan ,Priyadarshini phase 3
+                    <br />Shree Rameshwaram Bagmugaliya
+                  <br />Bhopal, Madhya Pradesh 462043
                     </p>
                   </div>
                 </div>
