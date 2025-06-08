@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               Providing sustainable solar solutions for homes and businesses in Madhya Pradesh.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61577041352724" className="text-gray-400 hover:text-primary-500 transition-colors">
                 <Facebook size={20} />
               </a>
               {/* <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors">
