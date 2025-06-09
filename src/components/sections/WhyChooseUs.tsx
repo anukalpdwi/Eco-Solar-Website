@@ -76,7 +76,7 @@ const WhyChooseUs: React.FC = () => {
   const stats = [
     {
       icon: <Clock className="h-6 w-6 text-secondary-500" />,
-      value: 50,
+      value: 200,
       label: "Projects Completed",
       suffix: "+",
     },
@@ -88,8 +88,8 @@ const WhyChooseUs: React.FC = () => {
     },
     {
       icon: <Award className="h-6 w-6 text-secondary-500" />,
-      value: 3,
-      label: "Districts Served",
+      value: 30,
+      label: "Locations",
       suffix: "+",
     },
     {
